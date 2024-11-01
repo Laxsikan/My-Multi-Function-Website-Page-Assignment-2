@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Multi Function Website Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main-section">
+        <div class="container">
+            <header>
+                <h1>Assignment-2 IS601 </h1>
+                <p>Select a tool to use:</p>
+            </header>
+            <nav>
+                <button onclick="showSection('reverseSection')">Reverse String</button>
+                <button onclick="showSection('palindromeSection')">Palindrome Checker</button>
+                <button onclick="showSection('tipCalculatorSection')">Tip Calculator</button>
+            </nav>
+            <section id="reverseSection" class="section">
+                <h2>Reverse String</h2>
+                <input type="text" id="inputString" placeholder="Enter a string">
+                <button onclick="reverseString()">Reverse</button>
+                <p id="reverseResult"></p>
+            </section>
+            <section id="palindromeSection" class="section">
+                <h2>Palindrome Checker</h2>
+                <input type="text" id="inputNumber" placeholder="Enter a series of numbers">
+                <button onclick="checkPalindrome()">Check</button>
+                <p id="palindromeResult"></p>
+            </section>
+            <section id="tipCalculatorSection" class="section">
+                <h2>Tip Calculator</h2>
+                <div class="tip-calculator-inputs">
+                    <input type="number" id="subtotal" placeholder="Enter Subtotal" />
+                    <input type="number" id="tipPercent" placeholder="Enter Tip Percentage" />
+                    <button onclick="calculateTotal()">Calculate Tip</button>
+                </div>
+                <p id="tipResult"></p>
+            </section>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; <span id="year"></span> Laxsikan Manoranjan. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
